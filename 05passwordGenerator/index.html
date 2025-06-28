@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" id="darkMode" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body class="bg-green-800 dark:bg-slate-800 dark:text-white">
+    <button class="bg-slate-600 text-white border rounded m-10 px-3 py-2 hover:bg-slate-800"
+      onclick="changeMode()"
+    >change mode</button>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const changeMode = () => {
+        let currentMode = document.getElementById("darkMode");
+        if(currentMode.className == "dark"){
+          currentMode.className = "light";
+        }
+        else{
+          currentMode.className = "dark";
+        }
+      }
+    </script>
+  </body>
+</html>
